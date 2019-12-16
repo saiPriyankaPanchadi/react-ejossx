@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
 
-const Homepage = () => <div>Homepage
+const Homepage = () => <div className='Home'>Homepage
 <div><Link to="/login" >Login </Link></div>
 </div>
 
