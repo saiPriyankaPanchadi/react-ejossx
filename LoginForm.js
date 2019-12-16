@@ -1,5 +1,5 @@
 import React from 'react';
-
+import propTypes from 'prop-types';
 import { Form, Button} from 'semantic-ui-react';
 import Validator from 'validator';
 import InlineError from './InlineError';
@@ -26,6 +26,9 @@ this.setState({
 submitHandler=()=>{
   const errors= this.validate(this.state.data);
   this.setState({errors });
+  if(Object.keys(errors).length ===0 ) {
+    this.props.submit(this.state.data);
+  }
 
 }
 validate=(data)=>{
@@ -54,4 +57,8 @@ render() {
   )
 }
 }
+LoginForm.propTypes = {
+  submit:propTypes.func.isRequired
+}
+
 export default LoginForm

@@ -1,9 +1,9 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 const InlineError =({text}) => <span style={{color:"red"}}>{text}</span>
-InlineError:PropTypes ={
-  text: PropTypes.string.isRequired
+InlineError:propTypes ={
+  text: propTypes.string.isRequired
 }
 
 export default InlineError
